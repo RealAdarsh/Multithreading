@@ -1,7 +1,6 @@
 package ProducerConsumer;
 
 import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class Producer  implements Runnable{
 
@@ -19,7 +18,7 @@ public class Producer  implements Runnable{
         while(true) {
             synchronized (cars) {
                 if (cars.size() < cap) {
-                    System.out.println(cars.size() + "From Producer");
+                    System.out.println(cars.size() + " From Producer");
                     cars.add(new Object());
                 }
             }

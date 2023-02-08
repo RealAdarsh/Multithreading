@@ -16,7 +16,7 @@ public class Consumer implements Runnable {
         while(true) {
             synchronized (cars) {
                 if (cars.size() > 0) {
-                    System.out.println(cars.size() + "From Consumer");
+                    System.out.println(cars.size() + " From Consumer");
                     cars.remove();
                 }
             }
